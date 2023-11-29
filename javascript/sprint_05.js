@@ -44,22 +44,33 @@ document.querySelector('.b-4').addEventListener('click', () => {
 // Task 05
 // Напишите стрелочную функцию f05 которая принимает класс input и возвращает ЧИСЛО введенное в данный input.
 // Тип функций, аргументов во всех задачах спринта - прописываете самостоятельно.
-// const f05 =
+const f05 = (str) => {
+    let temp = Number(document.querySelector(str).value);
+    return (temp);
+};
 document.querySelector('.b-5').addEventListener('click', () => {
-    //  document.querySelector('.out-5').textContent = String(f05('.i-5')); 
+    document.querySelector('.out-5').textContent = String(f05('.i-5'));
 });
 // Task 06
 // Напишите стрелочную функцию - процедуру f06 которая получает строки из .i-61 и .i-62 и выводит в .out-6 большую строку.
 // Тип данных для стрелочной функции пропишите самостоятельно.
-// const f06 = 
-//  document.querySelector('.b-6').addEventListener('click', f06);
+const f06 = () => {
+    let str1 = String(document.querySelector('.i-61').value);
+    let str2 = String(document.querySelector('.i-62').value);
+    let out = '';
+    str1.length > str2.length ? out = str1 : out = str2;
+    document.querySelector('.out-6').textContent = out;
+};
+document.querySelector('.b-6').addEventListener('click', f06);
 // Task 07
 // Напишите стрелочную функцию f07 которая получает email и проверяет что срока содержит символ '@'. Если содержит то,
 // возвращает строку, приведенную к нижнему регистру и с обрезанными по краям пробелами. Если строка не содержит @,
 // то возвращает false. Тип функций, аргументов во всех задачах спринта - прописываете самостоятельно.
-// const f07 =
+const f07 = (str) => {
+    return (str.includes('@')) ? str.trim().toLowerCase() : false;
+};
 document.querySelector('.b-7').addEventListener('click', () => {
-    //  document.querySelector('.out-7').textContent = String(f07(' glossuRaBBan@mail.ru ')); 
+    document.querySelector('.out-7').textContent = String(f07(' glossuRaBBan@mail.ru '));
 });
 // Task 08
 // Напишите стрелочную функцию f08 которая получает два числа как аргументы и возвращает случайное целое число в указанном диапазоне.

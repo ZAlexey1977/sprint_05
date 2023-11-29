@@ -57,20 +57,30 @@ document.querySelector('.b-4').addEventListener('click', () : void => {
 // Напишите стрелочную функцию f05 которая принимает класс input и возвращает ЧИСЛО введенное в данный input.
 // Тип функций, аргументов во всех задачах спринта - прописываете самостоятельно.
 
-// const f05 =
+const f05 = (str:string) : number => {
+    let temp = Number((<HTMLInputElement> document.querySelector(str)).value);
+  return (temp);
+}
  
  document.querySelector('.b-5').addEventListener('click', () : void => {
-    //  document.querySelector('.out-5').textContent = String(f05('.i-5')); 
- });
+    document.querySelector('.out-5').textContent = String(f05('.i-5')); 
+});
 
 
 // Task 06
 // Напишите стрелочную функцию - процедуру f06 которая получает строки из .i-61 и .i-62 и выводит в .out-6 большую строку.
 // Тип данных для стрелочной функции пропишите самостоятельно.
 
-// const f06 = 
+const f06 = () : void => {
 
-//  document.querySelector('.b-6').addEventListener('click', f06);
+  let str1 : string = String((<HTMLInputElement> document.querySelector('.i-61')).value);
+  let str2 : string = String((<HTMLInputElement> document.querySelector('.i-62')).value);
+  let out = '';
+  str1.length > str2.length ? out = str1 : out = str2;
+  document.querySelector('.out-6').textContent = out;
+}
+
+document.querySelector('.b-6').addEventListener('click', f06);
 
 
 // Task 07
@@ -78,10 +88,14 @@ document.querySelector('.b-4').addEventListener('click', () : void => {
 // возвращает строку, приведенную к нижнему регистру и с обрезанными по краям пробелами. Если строка не содержит @,
 // то возвращает false. Тип функций, аргументов во всех задачах спринта - прописываете самостоятельно.
 
-// const f07 =
+const f07 = (str:string) : string | boolean => {
+
+  return (str.includes('@')) ? str.trim().toLowerCase() : false;
+
+}
  
  document.querySelector('.b-7').addEventListener('click', () : void => {
-    //  document.querySelector('.out-7').textContent = String(f07(' glossuRaBBan@mail.ru ')); 
+    document.querySelector('.out-7').textContent = String(f07(' glossuRaBBan@mail.ru ')); 
  });
 
 
