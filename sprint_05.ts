@@ -30,23 +30,27 @@ document.querySelector('.b-2').addEventListener('click', () : void => {
 // и приведенную к нижнему регистру. Предусмотрите что аргумент может быть не обязательный - в таком случае
 // функция возвращает пустую строку. Тип функций, аргументов во всех задачах спринта - прописываете самостоятельно.
 
-// const f03 = 
+const f03 = (str?: string) : string => {
+    return (str) ? str.trim().toLowerCase() : '';
+} 
 
 document.querySelector('.b-3').addEventListener('click', () : void => {
-    // const result : string =  f03(' Paul Atreides ');
-    // document.querySelector('.out-3').textContent = result;
-    // console.log(result);
-    // console.log(result.length); 
+    const result : string =  f03(' Paul Atreides ');
+    document.querySelector('.out-3').textContent = result;
+    console.log(result);
+    console.log(result.length); 
 });
 
 // Task 04
 // Напишите стрелочную функцию f04, которая принимает число - и возвращает true если число четное, и false в противном случае.
 // Тип функций, аргументов во всех задачах спринта - прописываете самостоятельно.
 
-// const f04 = 
+const f04 = (num: number) : boolean => {
+return (num % 2 == 0) ? true : false;
+}
 
 document.querySelector('.b-4').addEventListener('click', () : void => {
-    // document.querySelector('.out-4').textContent = String(f04(3)); 
+    document.querySelector('.out-4').textContent = String(f04(3)); 
 });
 
 // Task 05
